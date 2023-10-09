@@ -1,0 +1,23 @@
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+  }
+
+  main {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .navbar,
+  .app-footer {
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 50px #e1e1e1;
+  }
+}

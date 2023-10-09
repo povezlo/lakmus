@@ -1,0 +1,9 @@
+:host {
+  width: 100%;
+
+  .json-container {
+    width: 100%;
+    max-height: 4rem;
+    overflow: auto;
+  }
+}
