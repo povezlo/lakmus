@@ -20,6 +20,7 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
 
   showFields: boolean[] = [true];
   minDate = new Date();
+  hasError = false;
 
   subscription = new Subscription();
   trackByFn: TrackByFunction<IDiagnosesIcpc2> = (_, item) => item.id
@@ -75,8 +76,11 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
 
   generateJson(): void {
     if ((this.diagnosesForm?.valid) === true) {
+      this.hasError = false;
       const formValues: IDiagnosesFormValues = this.diagnosesForm.value;
       this.json = this.jsonService.getJson(formValues, this.diagnosesIcpc2List);
+    } else {
+      this.hasError = true;
     }
   }
 
