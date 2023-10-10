@@ -1,14 +1,27 @@
 # Lakmus
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Тестове завдання Лакмус. Створено на Ангулар 15.
+
+### Використані додаткові ліби:
+- eslint
+- prettier
+- ngx-bootstrap
+- uuid
+
+### Веб-додаток містить дві сторінки.
+- Головна Home page
+- Форма з динамічною таблицею діагнозів. На сторінці форма, де можна вибрати діагнози за ICPC2. Сформувати json з цих даних. Id в масиві conditions генерується завдяки сервісу randomId. Є валідація дати: не може бути у минулому. Якщо не вказано жодного діагнозу - не формувати масив conditions. Якщо для обраного діагнозу не вказаний коментар - в notes діагноза передавати пусте значення
+
+
+### Створені сервiси:
+- api-service  (дозволяє отримати дані із сервера)
+- randomId service (дозволяє отримати рандомне id )
+- json service (дозволяє сформувати json об'єкт)
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -16,12 +29,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
