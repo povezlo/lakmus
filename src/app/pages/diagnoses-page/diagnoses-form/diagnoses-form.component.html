@@ -1,5 +1,6 @@
 <div class="row">
-    <form [formGroup]="diagnosesForm" data-toggle="validator" role="form" class="form-inline col-md-6 mx-md-auto my-5">
+  <div class="card col-md-6 mx-md-auto mt-5 p-4">
+    <form [formGroup]="diagnosesForm" data-toggle="validator" role="form" class="form-inline">
         <div class="form-group row mb-4">
             <div class="col-auto">
                 <label class="col-form-label fw-bold fs-5">Дата:</label>
@@ -49,8 +50,8 @@
         <div class="form-group">
             <label for="jsontext" class="form-label fw-bold">JSON:</label>
             <textarea class="form-control" id="jsontext" rows="4">{{json | json}}</textarea>
-
         </div>
     </form>
+  </div>
 </div>
 
