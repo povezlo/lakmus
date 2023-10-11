@@ -37,7 +37,7 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.initDictionaries();
+    this.getDiagnosesIcpc2List();
     this.initForm();
   }
 
@@ -49,7 +49,7 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
     this.addFormGroup(1);
   }
 
-  initDictionaries(): void {
+  getDiagnosesIcpc2List(): void {
     const apiSub = this.apiService.get<IDiagnosesIcpc2[]>('Dictionaries/icpc2', {IsPublic: true, Search: 'Хо'})
     .subscribe((res: IDiagnosesIcpc2[]) => {
       this.diagnosesIcpc2List = res;
