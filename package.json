@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --runInBand",
-    "test-coverage": "ng test --watch=false --code-coverage",
+    "test-coverage": "ng test --watch --code-coverage",
     "test-watch": "ng test --watch",
     "lint": "eslint",
     "lint:fix": "eslint --fix"

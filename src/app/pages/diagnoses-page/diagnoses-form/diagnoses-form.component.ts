@@ -4,7 +4,7 @@ import { Validators, FormBuilder, FormGroup, FormArray, AbstractControl } from '
 import { Subscription } from 'rxjs';
 
 import { fadeInAnimation } from './animation';
-import { IDiagnosesIcpc2, ApiService, IDiagnosesFormValues, IEncounterData, JsonService } from 'src/app/shared';
+import { IDiagnosesIcpc2, ApiClientService, IDiagnosesFormValues, IEncounterData, JsonService } from 'src/app/shared';
 
 @Component({
   selector: 'app-diagnoses-form',
@@ -27,7 +27,7 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
 
   constructor (
     private readonly fb: FormBuilder,
-    private readonly apiService: ApiService,
+    private readonly apiService: ApiClientService,
     private readonly jsonService: JsonService,
     private cdr: ChangeDetectorRef
     ) {}

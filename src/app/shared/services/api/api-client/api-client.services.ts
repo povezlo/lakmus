@@ -3,11 +3,11 @@ import { Inject, Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { BASE_URL } from '../injectTokens';
-import { IHttpParams } from '../models';
+import { BASE_URL } from '../../../injectTokens';
+import { IHttpParams } from '../../../models';
 
 @Injectable({ providedIn: 'root' })
-export class ApiService {
+export class ApiClientService {
 
 	constructor(
 		@Inject(BASE_URL) private readonly baseUrl: string,
