@@ -4,7 +4,7 @@ import { Validators, FormBuilder, FormGroup, FormArray, AbstractControl } from '
 import { Subscription } from 'rxjs';
 
 import { fadeInAnimation } from './animation';
-import { IDiagnosesIcpc2, ApiClientService, IDiagnosesFormValues, IEncounterData, JsonService } from 'src/app/shared';
+import { IDiagnosesIcpc2, ApiClientService, IDiagnosesFormValues, IEncounterData, JsonService } from '@shared';
 
 @Component({
   selector: 'app-diagnoses-form',

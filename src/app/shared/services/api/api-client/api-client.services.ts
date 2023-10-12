@@ -3,8 +3,8 @@ import { Inject, Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { BASE_URL } from '../../../injectTokens';
-import { IHttpParams } from '../../../models';
+import { BASE_URL } from '@shared/injectTokens';
+import { IHttpParams } from '@shared//models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiClientService {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ICondition, IDiagnosesFormValues, IDiagnosis, IDiagnosesIcpc2, IEncounterData } from '../models';
-import { RandomIdService } from './randomId.service';
+import { ICondition, IDiagnosesFormValues, IDiagnosis, IDiagnosesIcpc2, IEncounterData } from '@shared/models';
+import { RandomIdService } from '@shared/services';
 
 @Injectable({
   providedIn: 'root',
