@@ -1,4 +1,4 @@
 export const environment = {
 	production: false,
-	baseURL: 'https://global.lakmus.org',
+	baseURL: 'http://localhost:3000',
 };

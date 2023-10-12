@@ -7,6 +7,7 @@ describe('DiagnosesFormComponent', () => {
   let fixture: ComponentFixture<DiagnosesFormComponent>
 
   beforeEach(async () => {
+    jest.clearAllMocks();
     await TestBed.configureTestingModule({
       declarations: [DiagnosesFormComponent]
     })
@@ -17,7 +18,7 @@ describe('DiagnosesFormComponent', () => {
     fixture.detectChanges()
   })
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy()
   })
 })

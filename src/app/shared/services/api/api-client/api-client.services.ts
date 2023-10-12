@@ -2,9 +2,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-
-import { BASE_URL } from '@shared/injectTokens';
-import { IHttpParams } from '@shared//models';
+import { BASE_URL } from 'src/app/shared/injectTokens';
+import { IHttpParams } from 'src/app/shared/models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiClientService {

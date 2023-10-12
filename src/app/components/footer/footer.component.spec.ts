@@ -13,11 +13,19 @@ describe('FooterComponent', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(FooterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = fixture.debugElement.componentInstance;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create full year date', () => {
+    expect(component.currentDate).toEqual(new Date().getFullYear());
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    const footer = compiled.querySelector('footer');
+    const date = String(new Date().getFullYear());
+    expect(footer.textContent).toContain(date);
   });
 });

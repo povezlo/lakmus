@@ -4,7 +4,7 @@ import { Validators, FormBuilder, FormGroup, FormArray, AbstractControl } from '
 import { Subscription } from 'rxjs';
 
 import { fadeInAnimation } from './animation';
-import { IDiagnosesIcpc2, ApiClientService, IDiagnosesFormValues, IEncounterData, JsonService } from '@shared';
+import { IDiagnosesIcpc2, ApiClientService, IDiagnosesFormValues, IEncounterData, JsonService, ApiRoutes } from '@shared';
 
 @Component({
   selector: 'app-diagnoses-form',
@@ -50,7 +50,7 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
   }
 
   getDiagnosesIcpc2List(): void {
-    const apiSub = this.apiService.get<IDiagnosesIcpc2[]>('Dictionaries/icpc2', {IsPublic: true, Search: 'Хо'})
+    const apiSub = this.apiService.get<IDiagnosesIcpc2[]>(ApiRoutes.dictionaries_icp2, {IsPublic: true, Search: 'Хо'})
     .subscribe((res: IDiagnosesIcpc2[]) => {
       this.diagnosesIcpc2List = res;
       this.cdr.markForCheck();
