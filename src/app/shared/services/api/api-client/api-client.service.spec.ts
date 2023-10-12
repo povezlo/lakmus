@@ -23,7 +23,6 @@ describe('ApiClientService', () => {
   });
 
   it('should be created', () => {
-    console.log('Creating', service)
     expect(service).toBeTruthy();
   });
 
@@ -36,9 +35,9 @@ describe('ApiClientService', () => {
       expect(data).toEqual(mockData);
     });
 
-  const req = httpMock.expectOne(environment.baseURL + '/test');
+    const req = httpMock.expectOne(environment.baseURL + '/test');
 
-  req.flush(mockData);
-  httpMock.verify();
-});
+    req.flush(mockData);
+    httpMock.verify();
+  });
 });
