@@ -1,5 +1,5 @@
 const express = require("express");
-const request = require("request");
+const axios = require("axios");
 
 const app = express();
 const port = 3000;
@@ -12,18 +12,16 @@ app.use((_, res, next) => {
   next();
 });
 
-app.get(DICTIONARIES_ICP2_ROUTE, (req, res) => {
-  const params = req.query;
-  const apiUrl = `${API_URL}${DICTIONARIES_ICP2_ROUTE}?IsPublic=true`;
+app.get(DICTIONARIES_ICP2_ROUTE, async (req, res) => {
+  const url = `${API_URL}${DICTIONARIES_ICP2_ROUTE}`;
 
-  console.log({ params: req.query });
-  request(apiUrl, (error, response, body) => {
-    if (!error && response.statusCode == 200) {
-      res.send(body);
-    } else {
-      res.status(500).send("An error occurred while requesting the API");
-    }
-  });
+  try {
+    const response = await axios.get(url, { params: req.query });
+    const data = response.data;
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).send("An error occurred while requesting the API");
+  }
 });
 
 app.listen(port, () => {

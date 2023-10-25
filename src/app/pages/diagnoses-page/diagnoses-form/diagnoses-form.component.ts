@@ -46,13 +46,13 @@ export class DiagnosesFormComponent implements OnInit, OnDestroy {
       diagnosis: this.fb.array([]),
       selectedDate: ['', Validators.required]
     });
-    this.addFormGroup(1);
+    this.addFormGroup();
   }
 
   getDiagnosesIcpc2List(): void {
     const apiSub = this.apiService.get<IDiagnosesIcpc2[]>(ApiRoutes.dictionaries_icp2, {IsPublic: true, Search: 'Хо'})
-    .subscribe((res: IDiagnosesIcpc2[]) => {
-      this.diagnosesIcpc2List = res;
+    .subscribe((response: IDiagnosesIcpc2[]) => {
+      this.diagnosesIcpc2List = response;
       this.cdr.markForCheck();
     });
 
