@@ -9,6 +9,13 @@
 - ngx-bootstrap
 - ngx-toastr
 - uuid
+- express
+- axios
+
+## Запустити проект
+
+1. Запустіть `npm run server` для запуску проксі-сервера.
+2. Запустіть `npm run start` для запуску додатка. Перейдіть до `http://localhost:4200/`.
 
 ### Веб-додаток містить дві сторінки.
 
@@ -29,10 +36,6 @@
 ### Додатково
 
 - Створено ErrorInterceptor (перехоплює помилки з сервера, виводить повідомлення про помилку на екран )
-
-## Development server
-
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Build
 
